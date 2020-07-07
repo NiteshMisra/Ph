@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.BatchClassroom">
+
+        <LinearLayout
+            android:id="@+id/v1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/classroom_background"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Classroom"
+                android:textSize="20sp"
+                android:layout_margin="15dp"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/montserrat"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tab1"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/classroom_selected"
+                        android:text="Recent\nClasses"
+                        android:padding="5dp"
+                        android:textSize="13sp"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center"
+                        android:layout_height="match_parent"/>
+
+                    <ImageView
+                        android:id="@+id/tab1dot"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/ic_dot"
+                        android:layout_margin="5dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tab2"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/classroom_not_selected"
+                        android:text="Classroom\nContent"
+                        android:textSize="13sp"
+                        android:padding="5dp"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center"
+                        android:layout_height="match_parent"/>
+
+                    <ImageView
+                        android:id="@+id/tab2dot"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/ic_dot"
+                        android:layout_margin="5dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:background="@drawable/classroom_background2"
+                android:layout_height="20dp"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/classroom_container"
+            android:layout_width="match_parent"
+            android:layout_below="@id/v1"
+            android:background="#F6F5FA"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.Live">
+
+        <View
+            android:layout_width="match_parent"
+            android:background="#07026C"
+            android:alpha="0.02"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:src="@drawable/live_back_btn"
+            android:padding="10dp"
+            android:layout_margin="6dp"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:id="@+id/v1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#676B72"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:text="Live Classes"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/v2"
+            android:layout_width="65dp"
+            android:src="@drawable/live_object"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/v1"
+            android:layout_marginTop="10dp"
+            android:layout_height="68dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/liveRcv"
+            android:layout_width="match_parent"
+            android:layout_below="@id/v2"
+            tools:listitem="@layout/element_live"
+            android:overScrollMode="never"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</layout>

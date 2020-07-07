@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/darkView"
+            android:layout_width="30dp"
+            android:background="@drawable/classes_dark_field"
+            android:layout_height="20dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/darkView"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="04:00"
+                android:textColor="#575757"
+                android:fontFamily="@font/montserrat"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginStart="20dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="PM"
+                android:textColor="#9E9E9E"
+                android:fontFamily="@font/montserrat"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginStart="07dp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="1 h 30 min"
+            android:layout_alignParentEnd="true"
+            android:textColor="#999999"
+            android:fontFamily="@font/montserrat"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_marginEnd="40dp"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/classes_item_background2"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@id/v1"
+            android:background="@drawable/classes_item_background"
+            app:layout_constraintBottom_toBottomOf="@id/v1"
+            app:layout_constraintStart_toStartOf="@id/v1"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintEnd_toEndOf="@id/v1"/>
+
+        <LinearLayout
+            android:id="@+id/v1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Limits of Function"
+                android:textColor="#575757"
+                android:fontFamily="@font/montserrat"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginStart="20dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Basic"
+                android:textColor="#9A9A9A"
+                android:fontFamily="@font/montserrat"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_gravity="end"
+                android:text="Start Class"
+                style="@style/Widget.MaterialComponents.Button"
+                app:cornerRadius="20dp"
+                android:textSize="14sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/v1"
+            tools:listitem="@layout/element_classes_topics"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
