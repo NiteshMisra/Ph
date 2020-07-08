@@ -7,6 +7,15 @@
     android:orientation="vertical"
     tools:context=".activity.MainActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:text="USER STORIES"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content"/>
+
     <Button
         android:id="@+id/loginUi"
         android:layout_width="wrap_content"
@@ -24,12 +33,21 @@
         android:text="Batch Listing" />
 
     <Button
+        android:id="@+id/batchOverViewUi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dp"
+        android:text="Batch OverView" />
+
+    <Button
         android:id="@+id/batchScheduleUi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="15dp"
-        android:text="Batch Schedule" />
+        android:padding="15dp"
+        android:text="Batch Schedule\n&amp;\nBatch Classroom" />
 
     <Button
         android:id="@+id/LastUi"
@@ -37,7 +55,15 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="15dp"
-        android:text="Last UI" />
+        android:text="Batch Classroom Content" />
+
+    <Button
+        android:id="@+id/VideoScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dp"
+        android:text="Video Screen" />
 
 
 </LinearLayout>

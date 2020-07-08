@@ -1,38 +1,248 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".activity.BatchOverview">
+<layout>
 
-    <LinearLayout
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#AE3168"
-        android:paddingStart="50dp"
-        android:layout_alignParentBottom="true"
-        android:paddingEnd="50dp"
-        android:padding="10dp"
-        android:weightSum="2">
+        android:background="#FFFDFA"
+        android:layout_height="match_parent"
+        tools:context=".activity.BatchOverview">
 
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="0dp"
-            style="@style/Widget.MaterialComponents.Button.Icon"
-            android:layout_weight="1"
-            android:text="Buy Now"
-            android:textColor="#AE3168"
-            android:textSize="14sp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            app:icon="@drawable/arrow2"
-            app:iconGravity="textEnd"
-            app:iconSize="10dp"
-            android:backgroundTint="#ffffff"
-            android:layout_height="wrap_content"/>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusableInTouchMode="true"
+                android:background="#FFFDFA"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/backBtn"
+                    android:layout_width="40dp"
+                    android:src="@drawable/live_back_btn"
+                    android:padding="10dp"
+                    android:layout_margin="6dp"
+                    android:layout_height="40dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="XII Physics - Batch 01"
+                    android:textColor="#2F2F2F"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="20sp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="By Richard Thomas Sir"
+                    android:textColor="#777777"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="13sp"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/crossedPrice"
+                        android:layout_width="wrap_content"
+                        android:text="\u20B9 1999"
+                        android:textColor="#777777"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="18sp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="\u20B9 999"
+                        android:layout_marginStart="15dp"
+                        android:textColor="#2F2F2F"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="18sp"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:src="@drawable/clock"
+                        android:layout_height="17dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="30 Dec 2019 to 29 Jan 2020"
+                        android:layout_marginStart="10dp"
+                        android:textColor="#AE3168"
+                        android:fontFamily="@font/montserrat"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/batch_overview_teacher_bg"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:scaleType="fitXY"
+                        android:background="@drawable/overview_image_bg"
+                        android:layout_height="220dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/teacherDetailRcv"
+                        android:layout_width="match_parent"
+                        tools:listitem="@layout/element_teacher_detail"
+                        android:overScrollMode="never"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:textSize="18sp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="20dp"
+                    android:textColor="#2C2C2C"
+                    android:fontFamily="@font/montserrat"
+                    android:text="What will you get in this class?"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textColor="#777777"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14sp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/batchTimingRcv"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="100dp"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/element_batch_timing"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2"
+                    android:overScrollMode="never"/>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
 
 
-</RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#AE3168"
+            android:layout_alignParentBottom="true"
+            android:paddingTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:paddingBottom="15dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:background="@drawable/class_overview_btn_bg"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="08dp"
+                android:paddingBottom="08dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Buy Now"
+                    android:textSize="13.5sp"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="#AE3168"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:src="@drawable/arrow_4"
+                    android:layout_marginStart="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="13dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:background="@drawable/class_overview_btn_bg"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginStart="8dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="08dp"
+                android:paddingBottom="08dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Classroom"
+                    android:textSize="13.5sp"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="#AE3168"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:src="@drawable/clock"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="15dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

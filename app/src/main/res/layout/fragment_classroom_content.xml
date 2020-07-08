@@ -16,8 +16,8 @@
             android:textSize="18sp"
             android:fontFamily="@font/montserrat"
             android:textStyle="bold"
-            android:layout_marginStart="27dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
             android:layout_marginBottom="15dp"
             android:layout_height="wrap_content"/>
 

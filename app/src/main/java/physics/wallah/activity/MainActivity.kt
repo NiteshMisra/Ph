@@ -3,7 +3,6 @@ package physics.wallah.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import physics.wallah.R
 
@@ -14,11 +13,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         loginUi.setOnClickListener {
-            Toast.makeText(this,"Not added yet",Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this,Login::class.java))
         }
 
         batchListingUi.setOnClickListener {
             startActivity(Intent(this,Live::class.java))
+        }
+
+        batchOverViewUi.setOnClickListener {
+            startActivity(Intent(this,BatchOverview::class.java))
         }
 
         batchScheduleUi.setOnClickListener {

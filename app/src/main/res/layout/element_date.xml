@@ -1,37 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:orientation="vertical"
-    android:padding="15dp"
-    android:background="@drawable/date_background"
-    android:gravity="center_horizontal"
-    android:layout_margin="5dp"
-    android:layout_height="wrap_content">
+<layout>
 
-    <TextView
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_medium"
-        android:textColor="#FFFFFF"
-        android:textSize="13sp"
-        android:text="JAN" />
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@drawable/date_selected_background"
+        android:gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:elevation="5dp"
+        android:id="@+id/layout"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:text="31"
-        android:fontFamily="@font/montserrat"
-        android:textColor="#FFFFFF"
-        android:textSize="19sp"
-        android:layout_marginTop="5dp"
-        android:textStyle="bold"
-        android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"
+            android:text="JAN" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/down_arrow"/>
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:text="31"
+            android:fontFamily="@font/montserrat"
+            android:textColor="#FFFFFF"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"/>
 
-</LinearLayout>
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/down_arrow"/>
+
+    </LinearLayout>
+
+</layout>
