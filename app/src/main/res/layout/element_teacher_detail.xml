@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/detail"
+            android:layout_width="match_parent"
+            android:text="Maths Expert"
+            android:textColor="#464646"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:drawableStart="@drawable/teacher_dot"
+            android:drawablePadding="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:fontFamily="@font/montserrat"
+            android:textSize="13sp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</layout>

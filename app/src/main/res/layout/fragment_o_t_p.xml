@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.login.OTP">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#08036D"
+        android:alpha="0.01"/>
+
+    <RelativeLayout
+        android:id="@+id/v1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:src="@drawable/arrow_3"
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="6dp"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Enter OTP"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="15sp"
+            android:textColor="#656A71"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:src="@drawable/whatsapp"
+            android:layout_alignParentEnd="true"
+            android:padding="8dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="6dp"
+            android:layout_height="40dp"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/v2"
+        android:layout_width="100dp"
+        android:layout_below="@id/v1"
+        android:layout_centerHorizontal="true"
+        android:background="#F0F0F0"
+        android:layout_marginTop="15dp"
+        android:layout_height="100dp"/>
+
+    <TextView
+        android:id="@+id/v3"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/v2"
+        android:text="Physics Wallah"
+        android:layout_marginTop="5dp"
+        android:textColor="#AE3168"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/sendToNumber"
+        android:layout_width="wrap_content"
+        android:text="Send to +91 8826 620 621"
+        android:layout_below="@id/v3"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="40dp"
+        android:textColor="#676B72"
+        android:fontFamily="@font/roboto"
+        android:textSize="13sp"
+        android:layout_marginBottom="15dp"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:id="@+id/v7"
+        android:layout_width="match_parent"
+        android:background="@drawable/sign_up_edt_bg"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_below="@id/sendToNumber"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:background="@android:color/transparent"
+            android:hint="Enter OTP"
+            android:textColorHint="#676B72"
+            android:textColor="#676B72"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:paddingStart="15dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingEnd="10dp"
+            android:layout_toStartOf="@id/v5"
+            android:textSize="13sp"
+            android:inputType="number"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/v5"
+            android:layout_width="11dp"
+            android:src="@drawable/mobile"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:layout_height="18dp"/>
+
+    </RelativeLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="140dp"
+        style="@style/Widget.MaterialComponents.Button"
+        app:strokeColor="#EEAFBD"
+        app:strokeWidth="1dp"
+        android:layout_centerHorizontal="true"
+        app:elevation="0dp"
+        app:cornerRadius="20dp"
+        android:backgroundTint="#FFF6F8"
+        android:padding="12dp"
+        android:text="Resend OTP"
+        android:textSize="12sp"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="#676B72"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/v7"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="#AE3168"
+        app:cornerRadius="30dp"
+        android:padding="15dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:text="Submit"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="14.5sp"
+        android:layout_marginBottom="50dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#ffffff"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
